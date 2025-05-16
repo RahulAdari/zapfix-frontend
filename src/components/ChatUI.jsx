@@ -2,7 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaPaperclip, FaPaperPlane } from "react-icons/fa";
 import ReactMarkdown from "react-markdown";
-import "../chatui.css";
+import "../ChatUI.css";
+
 import logo from "../assets/logo.png"; 
 import { API_BASE_URL } from "../config";
 import axios from "axios";
