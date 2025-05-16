@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../config"; // ✅ correct
-import "./login.css"; // styles here
+import "./Login.css"; // styles here
 
 function Login() {
   const [email, setEmail] = useState("admin@example.com");
