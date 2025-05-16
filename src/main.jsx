@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import "./chatui.css"; // ✅ correct path
+import "./ChatUI.css";
 import "./components/Login.css";
 import "./components/App.css";
 import './index.css'
