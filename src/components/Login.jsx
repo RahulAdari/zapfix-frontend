@@ -3,6 +3,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../config"; // ✅ correct
 import "./Login.css"; // styles here
+import logo from "../assets/logo.png";
+
+<img src={logo} alt="Zapfix" />
+
 
 function Login() {
   const [email, setEmail] = useState("admin@example.com");
