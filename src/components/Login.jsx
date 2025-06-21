@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { API_BASE_URL } from "../config"; // ✅ correct
-import "./Login.css"; // styles here
-import logo from "../assets/logo.png";
-
-<img src={logo} alt="Zapfix" />
-
+import { API_BASE_URL } from "../config";
+import "./Login.css";
+import logo from "../assets/logo.png"; // ✅ used below
 
 function Login() {
   const [email, setEmail] = useState("admin@example.com");
@@ -20,25 +17,23 @@ function Login() {
         email,
         password,
       });
-  
-      // ✅ Store token and email
+
       localStorage.setItem("zapfix_token", res.data.token);
       localStorage.setItem("zapfix_email", email);
-  
-      // ✅ Redirect based on role
+
       if (email === "admin@example.com") {
-        navigate("/chat"); // Chat Frontend
+        navigate("/chat");
       }
     } catch (err) {
       alert("Login failed. Please check credentials.");
       console.error("Login error:", err);
     }
-  };  
+  };
 
   return (
     <div className="login-container">
       <div className="login-box">
-        <img src="/logo.png" alt="Zapfix" className="zapfix-logo" />
+        <img src={logo} alt="Zapfix Logo" className="zapfix-logo" />
         <h1 className="title">Welcome to Zapfix</h1>
         <p className="subtitle">Your AI-Powered IT Assistant</p>
         {error && <div className="error">{error}</div>}
