@@ -1,7 +1,6 @@
-// chat-frontend/src/App.jsx
-
+// App.jsx
 import React from "react";
-import { Routes, Route, Navigate, HashRouter } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/Login";
 import ChatUI from "./components/ChatUI";
 import ProtectedRoute from "./components/ProtectedRoute";
